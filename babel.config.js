@@ -6,6 +6,7 @@ const plugins = [
       alias: {
         assets: './src/assets',
         components: './src/components',
+        context: './src/context',
         screens: './src/screens',
         navigations: './src/navigations',
         config: './src/config',
@@ -18,6 +19,7 @@ const plugins = [
       },
     },
   ],
+  'react-native-reanimated/plugin',
 ];
 
 module.exports = {

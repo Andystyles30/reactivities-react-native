@@ -43,6 +43,7 @@
       "assets/*": ["src/assets/*"],
       "components": ["src/components/index.tsx"],
       "components/*": ["src/components/*"],
+      "context/*": ["src/context/*"],
       "screens/*": ["src/screens/*"],
       "navigations/*": ["src/navigations/*"],
       "config": ["src/config/index.ts"],
