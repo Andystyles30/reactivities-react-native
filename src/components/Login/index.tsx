@@ -2,7 +2,8 @@ import Container from 'components/common/Container';
 import CustomButton from 'components/common/CustomButton';
 import Input from 'components/common/Input';
 import React, {useState} from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {TouchableOpacity} from 'react-native';
+import {MaterialIcon} from 'components/Icon';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -16,7 +17,6 @@ const Login = () => {
         onChangeText={text => setUsername(text)}
         value={username}
         placeholder="Enter Username"
-        // error={'this field is required'}
       />
       <Input
         label="Password"
@@ -29,7 +29,11 @@ const Login = () => {
             onPress={() => {
               setIsSecureEntry(prev => !prev);
             }}>
-            <Text>{isSecureEntry ? 'Show' : 'Hide'}</Text>
+            <MaterialIcon
+              size="large"
+              color="black"
+              name={isSecureEntry ? 'eye-off' : 'eye'}
+            />
           </TouchableOpacity>
         }
         iconPosition="right"
