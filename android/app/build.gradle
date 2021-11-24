@@ -152,6 +152,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        		releaseSigningConfig {
+					storeFile rootProject.file("app/android-app-center.jks")
+					storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+					keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+					keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
+				}
     }
     buildTypes {
         debug {
