@@ -2,7 +2,6 @@ import colors from 'assets/theme/colors';
 import React, {useState} from 'react';
 import {View, TextInput, Text} from 'react-native';
 import styles from './styles';
-
 interface Props {
   onChangeText: (text: any) => void;
   iconPosition?: string;

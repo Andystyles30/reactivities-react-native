@@ -4,6 +4,7 @@ import Input from 'components/common/Input';
 import React, {useState} from 'react';
 import {TouchableOpacity} from 'react-native';
 import {MaterialIcon} from 'components/Icon';
+import {StyleSheet} from 'react-native';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -26,12 +27,13 @@ const Login = () => {
         secureTextEntry={isSecureEntry}
         icon={
           <TouchableOpacity
+            style={styles.touchableOpacity}
             onPress={() => {
               setIsSecureEntry(prev => !prev);
             }}>
             <MaterialIcon
               size="large"
-              color="black"
+              color="grey"
               name={isSecureEntry ? 'eye-off' : 'eye'}
             />
           </TouchableOpacity>
@@ -42,5 +44,14 @@ const Login = () => {
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  touchableOpacity: {
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    paddingRight: 3,
+  },
+});
 
 export default Login;
