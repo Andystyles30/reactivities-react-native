@@ -2,9 +2,9 @@ import Container from 'components/common/Container';
 import CustomButton from 'components/common/CustomButton';
 import Input from 'components/common/Input';
 import React, {useState} from 'react';
-import {TouchableOpacity} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 import {MaterialIcon} from 'components/Icon';
-import {StyleSheet} from 'react-native';
+import styles from './styles';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -13,6 +13,12 @@ const Login = () => {
 
   return (
     <Container>
+      <Image
+        height={70}
+        width={70}
+        style={styles.logoImage}
+        source={require('assets/images/logo.png')}
+      />
       <Input
         label="Username"
         onChangeText={text => setUsername(text)}
@@ -44,14 +50,5 @@ const Login = () => {
     </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  touchableOpacity: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    paddingRight: 3,
-  },
-});
 
 export default Login;
