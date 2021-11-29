@@ -1,4 +1,4 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import ContactDetail from 'screens/ContactDetail';
 import Contacts from 'screens/Contacts';
@@ -12,7 +12,7 @@ import {
   SETTINGS,
 } from '../constants/routeNames';
 
-const HomeStack = createNativeStackNavigator();
+const HomeStack = createStackNavigator();
 
 const HomeNavigator = () => {
   return (
