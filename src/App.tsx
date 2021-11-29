@@ -1,11 +1,14 @@
 import React from 'react';
 import GlobalProvider from 'context/Provider';
 import AppNavContainer from './navigations';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
   return (
     <GlobalProvider>
-      <AppNavContainer />
+      <NavigationContainer>
+        <AppNavContainer />
+      </NavigationContainer>
     </GlobalProvider>
   );
 };

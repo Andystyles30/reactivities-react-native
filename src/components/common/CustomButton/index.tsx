@@ -10,12 +10,24 @@ interface Props {
   secondary?: boolean;
   primary?: boolean;
   danger?: boolean;
+  rose?: boolean;
+  sucesss?: boolean;
   disabled?: boolean;
   loading: boolean;
 }
 
 const CustomButton = (props: Props) => {
-  const {title, onPress, disabled, primary, secondary, danger, loading} = props;
+  const {
+    title,
+    onPress,
+    disabled,
+    primary,
+    secondary,
+    danger,
+    sucesss,
+    rose,
+    loading,
+  } = props;
 
   const getBgColor = () => {
     if (disabled) {
@@ -29,6 +41,12 @@ const CustomButton = (props: Props) => {
     }
     if (danger) {
       return colors.danger;
+    }
+    if (sucesss) {
+      return colors.sucesss;
+    }
+    if (rose) {
+      return colors.pink;
     }
   };
 

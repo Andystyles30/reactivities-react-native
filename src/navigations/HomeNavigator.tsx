@@ -12,8 +12,9 @@ import {
   SETTINGS,
 } from '../constants/routeNames';
 
+const HomeStack = createNativeStackNavigator();
+
 const HomeNavigator = () => {
-  const HomeStack = createNativeStackNavigator();
   return (
     <HomeStack.Navigator initialRouteName="Contacts">
       <HomeStack.Screen name={CONTACT_LIST} component={Contacts} />

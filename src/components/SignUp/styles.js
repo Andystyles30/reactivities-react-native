@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../assets/theme/colors';
+// import colors from '../../../assets/theme/colors';
 
 export default StyleSheet.create({
   logoImage: {
@@ -7,23 +9,18 @@ export default StyleSheet.create({
     alignSelf: 'flex-start',
   },
 
-  touchableOpacity: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    paddingRight: 3,
-  },
-
   title: {
     fontSize: 21,
-    textAlign: 'left',
+    textAlign: 'center',
+    paddingTop: 20,
+    fontWeight: '500',
   },
 
   subTitle: {
-    fontSize: 20,
-    textAlign: 'left',
-    paddingTop: 20,
+    fontSize: 17,
+    textAlign: 'center',
     paddingVertical: 20,
+    fontWeight: '500',
   },
 
   form: {
@@ -33,7 +30,7 @@ export default StyleSheet.create({
   createSection: {},
   linkBtn: {
     paddingLeft: 17,
-    // color: colors.primary,
+    color: colors.primary,
     fontSize: 16,
   },
 

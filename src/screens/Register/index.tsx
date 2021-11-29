@@ -1,12 +1,9 @@
+import RegisterComponent from 'components/SignUp';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {NavigationProps} from 'types/navigationProps';
 
-const Register = () => {
-  return (
-    <View>
-      <Text>Hi from Register </Text>
-    </View>
-  );
+const Register = ({navigation}: NavigationProps) => {
+  return <RegisterComponent navigation={navigation} />;
 };
 
 export default Register;

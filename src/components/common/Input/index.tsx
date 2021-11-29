@@ -6,7 +6,7 @@ interface Props {
   onChangeText: (text: any) => void;
   iconPosition?: string;
   icon?: any;
-  value: string;
+  value?: string;
   label: string;
   style?: {};
   error?: string;
