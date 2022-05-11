@@ -2,7 +2,6 @@ import colors from 'assets/theme/colors';
 import React from 'react';
 import {ActivityIndicator, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
-// import styles from './styles';
 
 interface Props {
   title: string;

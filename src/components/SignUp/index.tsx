@@ -1,4 +1,3 @@
-import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 
 import {Image, Text, View} from 'react-native';
@@ -14,10 +13,10 @@ import {NavigationProps} from 'types/navigationProps';
 type Props = {
   onSubmit: () => void;
   onChange: ({name, value}: any) => void;
-  form: any;
+  // form: any;
   loading: boolean;
-  error?: any;
-  errors?: any;
+  // error?: any;
+  // errors?: any;
 } & NavigationProps;
 
 const RegisterComponent = ({
@@ -26,10 +25,9 @@ const RegisterComponent = ({
   onChange,
   // form,
   loading,
-  error,
-  errors,
-}: Props) => {
-  const {navigate} = useNavigation();
+}: // error,
+// errors,
+Props) => {
   const [isSecureEntry, setIsSecureEntry] = useState(true);
 
   return (
@@ -42,41 +40,30 @@ const RegisterComponent = ({
       />
 
       <View>
-        {/* <Text style={styles.title}>Welcome to RNContacts</Text>
-        <Text style={styles.subTitle}>Create a free account</Text> */}
-
         <View style={styles.form}>
           {/* {error?.error && (
             <Message retry danger retryFn={onSubmit} message={error?.error} />
           )} */}
           <Input
-            label="Username"
+            label="Display Name"
             iconPosition="right"
-            placeholder="Enter Username"
+            placeholder="Enter Display Name"
             // error={errors.userName || error?.username?.[0]}
             onChangeText={value => {
-              onChange({name: 'userName', value});
+              onChange({name: 'displayName', value});
             }}
           />
 
           <Input
-            label="First name"
+            label="Username"
             iconPosition="right"
-            placeholder="Enter First name"
+            placeholder="Enter Username"
             onChangeText={value => {
-              onChange({name: 'firstName', value});
+              onChange({name: 'username', value});
             }}
             // error={errors.firstName || error?.first_name?.[0]}
           />
-          <Input
-            label="Last Name"
-            iconPosition="right"
-            placeholder="Enter Last name"
-            // error={errors.lastName || error?.last_name?.[0]}
-            onChangeText={value => {
-              onChange({name: 'lastName', value});
-            }}
-          />
+
           <Input
             label="Email"
             iconPosition="right"

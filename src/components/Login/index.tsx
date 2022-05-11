@@ -9,7 +9,6 @@ import styles from './styles';
 import {NavigationProps} from 'types/navigationProps';
 
 const Login = ({navigation}: NavigationProps) => {
-  console.log(navigation);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isSecureEntry, setIsSecureEntry] = useState(true);
