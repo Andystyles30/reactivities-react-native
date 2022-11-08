@@ -8,6 +8,14 @@ export default StyleSheet.create({
     borderRadius: 4,
     paddingHorizontal: 5,
     marginTop: 5,
+    justifyContent: 'center',
+  },
+
+  touchableOpacity: {
+    width: '8%',
+    height: '100%',
+    justifyContent: 'center',
+    paddingRight: 3,
   },
 
   inputContainer: {
@@ -24,5 +32,9 @@ export default StyleSheet.create({
     color: colors.danger,
     paddingTop: 4,
     fontSize: 12,
+  },
+
+  iconContainer: {
+    flexDirection: 'row-reverse',
   },
 });

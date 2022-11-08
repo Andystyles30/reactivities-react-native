@@ -3,15 +3,13 @@ import CustomButton from 'components/common/CustomButton';
 import Input from 'components/common/Input';
 import * as screens from 'constants/routeNames';
 import React, {useState} from 'react';
-import {Image, TouchableOpacity, View} from 'react-native';
-import {MaterialIcon} from 'components/Icon';
+import {Image, View} from 'react-native';
 import styles from './styles';
 import {NavigationProps} from 'types/navigationProps';
 
 const Login = ({navigation}: NavigationProps) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isSecureEntry, setIsSecureEntry] = useState(true);
 
   return (
     <Container>
@@ -36,20 +34,7 @@ const Login = ({navigation}: NavigationProps) => {
             onChangeText={text => setPassword(text)}
             value={password}
             placeholder="Enter Password"
-            secureTextEntry={isSecureEntry}
-            icon={
-              <TouchableOpacity
-                style={styles.touchableOpacity}
-                onPress={() => {
-                  setIsSecureEntry(prev => !prev);
-                }}>
-                <MaterialIcon
-                  size="large"
-                  color="grey"
-                  name={isSecureEntry ? 'eye-off' : 'eye'}
-                />
-              </TouchableOpacity>
-            }
+            secureEntry={true}
             iconPosition="right"
           />
           <CustomButton primary title="Log In" loading={false} />

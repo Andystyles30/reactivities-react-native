@@ -7,13 +7,6 @@ export default StyleSheet.create({
     alignSelf: 'flex-start',
   },
 
-  touchableOpacity: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    paddingRight: 3,
-  },
-
   title: {
     fontSize: 21,
     textAlign: 'left',
